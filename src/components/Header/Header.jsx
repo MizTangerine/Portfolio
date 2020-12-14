@@ -1,15 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 const Header = ({ user }) => {
-    const location = useLocation();
+    // const location = useLocation();
     console.log('header: ', user)
 
     return (
         // <div isHome={location.pathname === '/'}>
         <div>
             <>
-                <i src={user.basics.picture} />
+                <img src={user.basics.picture} alt="Clarissa" />
                 <div>
                     <h2>{user.basics.name}</h2>
                     <h4>

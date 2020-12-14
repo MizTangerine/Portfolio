@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { Link, useLocation } from 'react-router-dom';
 
 const items = [
     { name: 'Me', path: '/' },
@@ -9,7 +10,7 @@ const items = [
 ];
 
 const Sidebar = () => {
-    const location = useLocation();
+    // const location = useLocation();
 
     return (
         <div >
