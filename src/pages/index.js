@@ -4,6 +4,7 @@ import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
 import Education from './Education';
+import Contact from './Contact';
 
 const Pages = ({ user }) => {
     console.log('user: ', user)
@@ -16,11 +17,14 @@ const Pages = ({ user }) => {
                 <Route path="/projects">
                     <Projects user={user} />
                 </Route>
+                <Route path="/education">
+                    <Education user={user} />
+                </Route>
                 <Route path="/work">
                     <Work user={user} />
                 </Route>
-                <Route path="/education">
-                    <Education user={user} />
+                <Route path="/contact">
+                    <Contact user={user} />
                 </Route>
             </Switch>
         </Router>

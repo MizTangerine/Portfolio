@@ -5,7 +5,7 @@ const Education = ({ user }) => {
     return (
         <Layout user={user}>
             <div>
-                <h2>Education</h2>
+                <h2>Education/Licenses</h2>
                 <ul>
                     {user.education.map((education, i) => (
                         <li key={i}>
