@@ -7,7 +7,7 @@ const Header = ({ user }) => {
 
     return (
         // <div isHome={location.pathname === '/'}>
-        <div>
+        <div style={{ float: 'right' }}>
             <>
                 <img src={user.basics.picture} alt="Clarissa" />
                 <div>
