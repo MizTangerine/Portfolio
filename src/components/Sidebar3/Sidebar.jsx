@@ -1,4 +1,6 @@
 import React from "react";
+// import { Link } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import ReactDOM from "react-dom";
 import SideNav, {
     Toggle,
@@ -14,19 +16,40 @@ import { SidebarData } from './SidebarData.js';
 import "./Sidebar.css";
 
 const Sidebar = () => {
-
+    const history = useHistory();
     return (
         <SideNav
+            style={{
+                position: 'relative',
+                float: 'left',
+                height: '100vh'
+            }}
             onSelect={selected => {
-                // Add your code here
-                console.log(selected)
+                history.push(selected)
             }}
         >
+
             <SideNav.Toggle />
 
-
             <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
+                {SidebarData.map(i => {
+                    return (
+                        <NavItem className={i.cName} eventKey={i.path} key={i.title}>
+                            <NavIcon>{i.icon}</NavIcon>
+                            <NavText>
+                                {/* <Link
+                                    element={Link}
+                                    to={i.path}
+                                >
+                                    {i.title}
+                                </Link> */}
+                                {i.title}
+                            </NavText>
+                        </NavItem>
+                    )
+                }
+                )}
+                {/* <NavItem eventKey="home">
                     <NavIcon>
                         <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
                     </NavIcon>
@@ -46,9 +69,9 @@ const Sidebar = () => {
                     <NavItem eventKey="charts/barchart">
                         <NavText>Bar Chart</NavText>
                     </NavItem>
-                </NavItem>
+                </NavItem> */}
             </SideNav.Nav>
-        </SideNav>
+        </SideNav >
     );
 }
 

@@ -9,7 +9,7 @@ export const SidebarData = [
     {
         title: 'AboutMe'
         , path: '/'
-        , icon: <IoIcons.IoIosContact />
+        , icon: <i className="far fa-user" style={{ fontSize: "1.75em" }} />
         , cName: 'nav-text'
     },
     {

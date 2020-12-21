@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Me from './Me';
@@ -5,11 +6,13 @@ import Projects from './Projects';
 import Work from './Work';
 import Education from './Education';
 import Contact from './Contact';
+import Sidebar from '../components/Sidebar3';
 
 const Pages = ({ user }) => {
     console.log('user: ', user)
     return (
         <Router>
+            <Sidebar style={{ position: 'relative' }} />
             <Switch>
                 <Route exact path="/">
                     <Me user={user} />
